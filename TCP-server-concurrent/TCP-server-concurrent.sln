@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCP-server-concurrent", "TCP-server-concurrent\TCP-server-concurrent.csproj", "{F029C0A9-57BC-4B87-85B1-0D28A7F677B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F029C0A9-57BC-4B87-85B1-0D28A7F677B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F029C0A9-57BC-4B87-85B1-0D28A7F677B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F029C0A9-57BC-4B87-85B1-0D28A7F677B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F029C0A9-57BC-4B87-85B1-0D28A7F677B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0769405-4630-41C6-9377-755024C73ECD}
+	EndGlobalSection
+EndGlobal
