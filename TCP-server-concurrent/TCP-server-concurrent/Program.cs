@@ -59,8 +59,8 @@ namespace TCP_server_concurrent
                             var bookskList = manager.GetAll();
                             reader.ReadLine();
                             writer.WriteLine("::::::::::All The Books::::::::");
-                            string serializedObject = JsonConvert.SerializeObject(bookskList);
-                            writer.WriteLine(serializedObject);
+                            string serializedListOfBooks = JsonConvert.SerializeObject(bookskList);
+                            writer.WriteLine(serializedListOfBooks);
                             //foreach (var book in bookskList)
                             //{
                             //    writer.WriteLine();
@@ -80,14 +80,16 @@ namespace TCP_server_concurrent
                             Book bookByISBN = manager.GetById(readISBN);
                             if (bookByISBN != null)
                             {
-                                writer.WriteLine();
-                                writer.WriteLine("Book details for inserted ISBN::::: ");
-                                writer.WriteLine($"Title : {bookByISBN.Title}");
-                                writer.WriteLine($"Author : {bookByISBN.Author}");
-                                writer.WriteLine($"Number of pages : {bookByISBN.PageNumber}");
-                                writer.WriteLine($"ISBN : {bookByISBN.ISBN13}");
-                                writer.WriteLine("---------------------------");
-                                
+                                string serializedBook = JsonConvert.SerializeObject(bookByISBN);
+                                writer.WriteLine(serializedBook);
+                                //writer.WriteLine();
+                                //writer.WriteLine("Book details for inserted ISBN::::: ");
+                                //writer.WriteLine($"Title : {bookByISBN.Title}");
+                                //writer.WriteLine($"Author : {bookByISBN.Author}");
+                                //writer.WriteLine($"Number of pages : {bookByISBN.PageNumber}");
+                                //writer.WriteLine($"ISBN : {bookByISBN.ISBN13}");
+                                //writer.WriteLine("---------------------------");
+
                             }
                             else
                             {
