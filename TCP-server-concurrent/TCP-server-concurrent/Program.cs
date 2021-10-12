@@ -59,15 +59,17 @@ namespace TCP_server_concurrent
                             var bookskList = manager.GetAll();
                             reader.ReadLine();
                             writer.WriteLine("::::::::::All The Books::::::::");
-                            foreach (var book in bookskList)
-                            {
-                                writer.WriteLine();
-                                writer.WriteLine($"Title : {book.Title}");
-                                writer.WriteLine($"Author : {book.Author}");
-                                writer.WriteLine($"Number of pages : {book.PageNumber}");
-                                writer.WriteLine($"ISBN : {book.ISBN13}");
-                                writer.WriteLine("---------------------------");
-                            }
+                            string serializedObject = JsonConvert.SerializeObject(bookskList);
+                            writer.WriteLine(serializedObject);
+                            //foreach (var book in bookskList)
+                            //{
+                            //    writer.WriteLine();
+                            //    writer.WriteLine($"Title : {book.Title}");
+                            //    writer.WriteLine($"Author : {book.Author}");
+                            //    writer.WriteLine($"Number of pages : {book.PageNumber}");
+                            //    writer.WriteLine($"ISBN : {book.ISBN13}");
+                            //    writer.WriteLine("---------------------------");
+                            //}
                             break;
 
                         case "Get":
